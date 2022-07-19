@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+
+    <h1>Login Page</h1>
+    {% if user %}
+    <p>Hello {{user.name}}</p>
+    <p>This is your email address: {{user.email}}</p>
+    {% else %}
+    <form method="post" action="/login">
+        <input type="text" name="user-name" placeholder="Enter your name"><br>
+        <input type="email" name="user-email" placeholder="Enter your email address"><br>
+        <input type="password" name="user-password" placeholder="Enter your password"><br>
+        <button>Submit</button>
+    </form>
+    {% endif %}
+
+</body>
+</html>
